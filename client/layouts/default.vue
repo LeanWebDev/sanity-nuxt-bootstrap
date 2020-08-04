@@ -15,12 +15,12 @@
           <b-badge variant="primary" class="ml-2">New</b-badge>
         </a>
       </b-jumbotron>
-      <section class="hero-bg" style="height: 24rem">
-        <section class="hero-pattern" style="height: 24rem">
+      <section class="hero-bg" style="height: 18rem">
+        <section class="hero-pattern" style="height: 18rem">
           <b-navbar type="dark" variant="faded">
             <b-container>
               <b-navbar-brand href="#">
-                Optimity
+                Optimity <span style="opacity: 0.8">Knowledge Base</span>
               </b-navbar-brand>
               <b-navbar-nav class="ml-auto">
                 <b-nav-item>
@@ -74,33 +74,22 @@
                 />
               </div>
             </template>
-
-            <p>Optimity's Knowledge Base</p>
           </b-jumbotron>
         </section>
       </section>
     </b-container>
-    <b-container fluid="sm" style="margin-top: -11rem">
+    <b-container fluid="sm" style="margin-top: -8rem">
       <Nuxt />
     </b-container>
-    <footer class="text-muted">
+    <footer style="margin-top: -10rem">
       <section class="footer-pattern">
         <section class="footer-bg">
           <b-jumbotron
             fluid="true"
             container-fluid="true"
             class="transparent-bg pb-3 mb-0 pt-0 mt-3 text-dark"
-            style="height: 100px"
-          >
-            <div class="container">
-              <p class="float-right">
-                <a href="#">Back to top</a>
-              </p>
-              <p>
-                Optimity &copy; London
-              </p>
-            </div>
-          </b-jumbotron>
+            style="height: 200px"
+          />
         </section>
       </section>
     </footer>
@@ -108,6 +97,11 @@
 </template>
 
 <style lang="scss">
+  // Import Bootstrap and BootstrapVue source SCSS files
+  @import '~bootstrap/scss/bootstrap.scss';
+  @import '~bootstrap-vue/src/index.scss';
+
+$primary: rgba(40, 72, 247, 1);
 
 .transparent-bg {
   background: transparent;
