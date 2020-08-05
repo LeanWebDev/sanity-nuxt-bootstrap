@@ -24,10 +24,9 @@
               <b-button
                 size="sm"
                 class="my-2 my-sm-0"
-                variant="outline-primary"
-                to="/portal"
+                variant="primary"
               >
-                Customer Portal
+                Get in touch
               </b-button>
             </b-nav-item>
           </b-navbar-nav>

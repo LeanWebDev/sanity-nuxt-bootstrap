@@ -59,6 +59,11 @@ export default {
     // Doc: https://github.com/nuxt/content
     "@nuxt/content"
   ],
+  bootstrapVue: {
+    icons: true, // Install the IconsPlugin (in addition to BootStrapVue plugin
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

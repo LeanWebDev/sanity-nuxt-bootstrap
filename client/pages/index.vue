@@ -7,7 +7,7 @@
     </b-row>
     <b-row class="px-3">
       <b-card-group deck>
-        <b-card v-for="(i, index) in 4" :key="index" footer-class="py-1">
+        <b-card v-for="(i, index) in 4" :key="index" class="shadow-sm" footer-class="py-1">
           <b-card-text>
             <h5 class="card-title">
               <span class="badge badge-custom">#Topic</span>
@@ -22,7 +22,7 @@
           </b-card-text>
           <template v-slot:footer>
             <small class="text-muted text-right">
-              <a href="#" class="stretched-link text-decoration-none">5 minute read</a>
+              <a href="/article" class="stretched-link text-decoration-none">5 minute read</a>
             </small>
           </template>
         </b-card>
@@ -34,21 +34,23 @@
       </h4>
       <b-card-group columns class="mb-3">
         <b-card
-          v-for="(i, index) in 6"
+          v-for="(i, index) in collections"
           :key="index"
           no-body
           footer-class="py-1"
           align="center"
           class="overflow-hidden"
         >
-          <b-row no-gutters>
+          <b-row no-gutters align-v="center">
             <b-col md="4">
-              <b-card-img src="https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg" alt="Image" class="rounded-0" />
+              <p class="h1 mb-2">
+                <b-icon :icon="i.icon" />
+              </p>
             </b-col>
             <b-col md="8">
-              <b-card-body title="#Topic">
+              <b-card-body :title="i.name">
                 <b-card-text>
-                  12 Articles
+                  {{ i.count }}
                 </b-card-text>
               </b-card-body>
             </b-col>
@@ -58,7 +60,7 @@
     </b-row>
     <b-row class="mb-4">
       <b-col sm="6">
-        <b-card bg-variant="dark" text-variant="white" title="Card Title" class="mb-3">
+        <b-card bg-variant="dark" text-variant="white" title="Promotion" class="mb-3">
           <b-card-text>
             With supporting text below as a natural lead-in to additional content.
           </b-card-text>
@@ -68,7 +70,7 @@
         </b-card>
       </b-col>
       <b-col sm="6">
-        <b-card bg-variant="dark" text-variant="white" title="Card Title" class="mb-3">
+        <b-card bg-variant="dark" text-variant="white" title="Promotion" class="mb-3">
           <b-card-text>
             With supporting text below as a natural lead-in to additional content.
           </b-card-text>
@@ -83,6 +85,18 @@
 
 <script>
 export default {
+  data () {
+    return {
+      collections: [
+        { name: 'WiFi', icon: 'wifi', count: 12 },
+        { name: 'Cloud', icon: 'cloud', count: 17 },
+        { name: 'Hardware', icon: 'cpu', count: 8 },
+        { name: 'Payments', icon: 'credit-card', count: 6 },
+        { name: 'MacOS', icon: 'cursor', count: 22 },
+        { name: 'Networks', icon: 'diagram3', count: 32 }
+      ]
+    }
+  }
 };
 </script>
 

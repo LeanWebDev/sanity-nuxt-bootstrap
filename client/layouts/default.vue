@@ -10,21 +10,20 @@
         class="my-0 py-1 text-center"
       >
         <a href="#" class="m-0 text-white">
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
+          A place to announce some really special news
           <b-badge variant="primary" class="ml-2">New</b-badge>
         </a>
       </b-jumbotron>
-      <section class="hero-bg" style="height: 18rem">
-        <section class="hero-pattern" style="height: 18rem">
+      <section class="hero-bg" style="height: 24rem">
+        <section class="hero-pattern" style="height: 24rem">
           <b-navbar type="dark" variant="faded">
             <b-container>
-              <b-navbar-brand href="#">
+              <b-navbar-brand href="/">
                 Optimity <span style="opacity: 0.8">Knowledge Base</span>
               </b-navbar-brand>
               <b-navbar-nav class="ml-auto">
                 <b-nav-item>
-                  <b-link to="/explore">
+                  <b-link to="/explore" class="text-light">
                     Explore
                   </b-link>
                 </b-nav-item>
@@ -33,6 +32,7 @@
                     size="sm"
                     class="my-2 my-sm-0"
                     variant="outline-light"
+                    to="/portal"
                   >
                     Customer Portal
                   </b-button>
@@ -78,7 +78,7 @@
         </section>
       </section>
     </b-container>
-    <b-container fluid="sm" style="margin-top: -8rem">
+    <b-container fluid="sm" style="margin-top: -13rem">
       <Nuxt />
     </b-container>
     <footer style="margin-top: -10rem">
